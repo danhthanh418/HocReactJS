@@ -1,0 +1,81 @@
+
+.no-spacing{
+  margin: 0 auto;
+}
+.mt-2p {
+    margin-top: 2%;
+}
+
+.mg {
+    margin: 1% 0.5%;
+}
+
+.mt {
+    margin-top: 1%
+}
+
+.ml {
+    margin-left: 0.5%;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 0.11em solid #333;
+    border-radius: 0.18em;
+    background-color: white;
+    color: #333;
+    padding: 0.3em 0.6em;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background-color: #333;
+    color: white;
+}
+
+.success-outline {
+    border-color: #4CAF50;
+    color: green;
+}
+
+.success-outline:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Blue */
+
+.info-outline {
+    border-color: #2196F3;
+    color: dodgerblue
+}
+
+.info-outline:hover {
+    background: #2196F3;
+    color: white;
+}
+
+/* Orange */
+
+.warning-outline {
+    border-color: #ff9800;
+    color: orange;
+}
+
+.warning-outline:hover {
+    background: #ff9800;
+    color: white;
+}
+
+/* Red */
+
+.danger-outline {
+    border-color: #f44336;
+    color: red
+}
+
+.danger-outline:hover {
+    background: #f44336;
+    color: white;
+}
