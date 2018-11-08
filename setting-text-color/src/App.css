@@ -1,0 +1,26 @@
+
+.mt-5p{
+  margin-top: 5%
+}
+.mt-2p{
+ margin-top: 2%;
+}
+.m-2p{
+  margin: 2%
+}
+
+.pad-10-20{
+  padding: 10px 20px
+}
+span{
+  padding: 10px 20px;
+  margin:  10px;
+  cursor: pointer;
+}
+.active{
+  border:solid 2px black
+}
+#content{
+  padding: 10px;
+  border:solid 2px red;
+}
