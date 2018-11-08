@@ -1,0 +1,22 @@
+.mt-1e{
+  margin-top: 1em;
+}
+.mt-0_5e{
+  margin-top: 0.5em
+}
+.fr{
+  float: right;
+  cursor: pointer;
+}
+.mg{
+  margin: 0.5em 0.25em
+}
+.fa{
+  cursor: pointer;
+}
+span{
+  cursor: pointer;
+}
+.dropdown-toggle::after{
+    display: none;
+}
