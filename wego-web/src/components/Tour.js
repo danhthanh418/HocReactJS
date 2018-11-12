@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import TourICardtem from './TourCardItem';
-import { BrowserRouter as a } from 'react-router-dom'
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 
 class Tour extends Component {
     render() {
         return (
             <div className="container">
                 <h3 class="localHeadLine hasLine">
-                    <a href="/trang-chu">
+                    <NavLink to="/trang-chu">
                         <span>
                             WEGO DEALS
             </span>
@@ -15,7 +15,7 @@ class Tour extends Component {
                             XEM THÊM TOURS <i class="fa fa-chevron-right" />
                         </span>
                         <span class="clearfix" />
-                    </a>
+                    </NavLink>
                 </h3>
                 <div class="row">
                     <TourICardtem

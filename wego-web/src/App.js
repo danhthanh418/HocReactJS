@@ -3,16 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import Tour from './components/Tour';
+import { BrowserRouter as Router} from 'react-router-dom'
+import CustomRouter from './components/CustomRouter';
 
 class App extends Component {
   render() {
     return (
-        <div>
-          <Navigation></Navigation>
-          <Tour></Tour>
-          <Footer></Footer>
-        </div>
+        <Router>
+          <div>
+            <Navigation></Navigation>
+            <CustomRouter></CustomRouter>
+            <Footer></Footer>
+          </div>
+      </Router>
     );
   }
 }
