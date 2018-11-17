@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {InstantSearch, SearchBox,Hits } from 'react-instantsearch/dom'
+import {InstantSearch, SearchBox,Hits,Highlight,Stats,SortBy } from 'react-instantsearch/dom'
 
 const SideBar = ()=>{
   return (
@@ -13,9 +13,14 @@ const Hit = ({hit}) =>{
         <img src={hit.image} alt=""></img>
       </div>
       <div className="hit-content">
-        <p>{hit.name}</p>
         <div className="hit-price">
           <p>{hit.price}</p>
+        </div>
+        <div className="hit-name">
+          <p attributeName="name" hit={hit}>{hit.name}</p>
+        </div>
+        <div className="hit-descripion">
+          <p attributeName="descripion" hit={hit}>{hit.description}</p>
         </div>
       </div>
     </div>
@@ -27,6 +32,7 @@ const Content = ()=>{
   return (
     <div className="content">
      <Hits hitComponent={Hit}></Hits>
+     
     </div>
   )
 }
@@ -36,9 +42,9 @@ class App extends Component {
   render() {
     return (
       <InstantSearch
-        appId="latency"
-        apiKey="3d9875e51fbd20c7754e65422f7ce5e1"
-        indexName="instant_search"
+        appId="WCC7MJNPPZ"
+        apiKey="580bf217e4f13f3f17879833ccb4a4cb"
+        indexName="dev_store"
         className="container"
       >
       <header className="header">
