@@ -56,15 +56,11 @@ class Controls extends Component {
     generateID=()=>(
         this.s4() + this.s4()+'-'+this.s4()+'-'+this.s4()+'-'+this.s4()+'-'+this.s4()
     )    
-
-    handleClick = ()=>{
-        
-    }
     render() {
         return (
             <div className="control text-center">
                 {/* Button */}
-                <button type="button" className="btn btn-success m-0">
+                <button type="button" className="btn btn-success m-0" onClick={this.props.action}>
                 <i className="fa fa-plus mr-1" aria-hidden="true"></i>
                 Thêm công việc</button>
                 <button type="button" className="btn btn-primary m-2" onClick={() => this.onCreateData()}>

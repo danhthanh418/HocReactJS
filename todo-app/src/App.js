@@ -11,15 +11,10 @@ class App extends Component {
   
     this.state = {
        tasks:[],
-       isDisplayForm:false
+       isDisplayForm:true
     };
   };
   
-  hanldeOpen  =  (isOpen)=>{
-    this.setState({
-      isDisplayForm: isOpen
-    })
-  }
   onCreateTask = (tasks)=>(
       this.setState({
         tasks: tasks
@@ -37,11 +32,13 @@ class App extends Component {
     }
   };
 
-  hanleClick = ()=>{
-    this.setState({
-      isDisplayForm: true
+  hanleClick = ()=>(
+   this.setState({
+      isDisplayForm: !this.state.isDisplayForm
     })
-  }
+  )
+
+  
   render() {
     const {tasks, isDisplayForm} = this.state
     const elemForm = isDisplayForm?<TaskForm></TaskForm>:'';
@@ -52,8 +49,8 @@ class App extends Component {
           <div className="card-body">
           <div className="row">
               {elemForm}
-              <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                <Controls onReceiveTask={(tasks) => this.onCreateTask(tasks)}></Controls>
+              <div className={isDisplayForm ? "col-xs-8 col-sm-8 col-md-8 col-lg-8" :"col-xs-12 col-sm-12 col-md-12 col-lg-12"}>
+                <Controls onReceiveTask={(tasks) => this.onCreateTask(tasks)} action={() => this.hanleClick()}></Controls>
                   <TaskList tasks={tasks}></TaskList>
               </div>
               
