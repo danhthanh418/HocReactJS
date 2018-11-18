@@ -5,6 +5,15 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .col-xs-5ths,
 .col-sm-5ths,
 .col-md-5ths,
@@ -97,14 +106,15 @@ footer.padding-10 {
 .price {
     font-size: 22px;
     font-weight: bold;
+    text-align: right;
 }
 
 .vcolor-info {
     color: #00c1de;
 }
 
-.tourHeaderInfo {
-    font-weight: bold;
+.cardItemPrice {
+    text-align: right;
 }
 
 .row {
@@ -120,9 +130,27 @@ footer.padding-10 {
     border-bottom: 1px solid rgba(148, 151, 163, .15);
 }
 
-.cardItem .cardItemContainer .cardItemContent .cardItemDepartDiv {
+.cardItem .cardItemContainer .cardItemDepartDiv {
     min-height: 35px;
     padding-left: 10px
+}
+
+.cardItemContent {
+    min-height: 35px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.bg-mediumblue {
+    background-color: #dbe9f5;
+}
+
+.cardItemContent :hover {
+    background-color: #dbe9f5;
+}
+
+.cardItemContent :active {
+    background-color: #dbe9f5;
 }
 
 .no-padding {
@@ -384,8 +412,160 @@ img {
 }
 
 .bg-lightblue {
+    background-color: #ecf0f5;
+}
+
+.fa-16 {
+    font-size: 16px;
+}
+
+.float-box {
+    background: #004a8b;
+    background: linear-gradient(to bottom, #0057a4 0, #003c71 100%);
+    border-color: rgba(0, 114, 215, .7);
+    color: white;
+    text-align: center;
+}
+
+.btn-send {
+    background: #f79321;
+}
+
+/* Create datepicker */
+
+#datepicker {
+    width: 180px;
+    margin: 0 20px 20px 20px;
+}
+
+#datepicker>span:hover {
+    cursor: pointer;
+}
+
+.pageTitle {
+    color: #003c71;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+h1,
+.h1 {
+    font-size: 36px;
+}
+
+/* SEARCH PANEL */
+
+.whyWeGoContainer .media {
+    color: #003c71;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.media>div>i {
+    font-size: 32px;
+    align-items: center;
+}
+
+.media-heading,
+.media-heading>b {
+    font-size: 16px;
+}
+
+.whyWeGo {
     background-color: #e0e7ef;
 }
-.fa-16{
-    font-size:16px;
+
+.tourHomeHeader {
+    transition: all .2s linear;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    background-color: #e0e7ef;
+}
+
+.tourHeaderInfo {
+    font-weight: bold;
+}
+
+.tourContainer {
+    background-color: #ecf0f5;
+}
+
+/* Recent search */
+
+.localHeadLine {
+    margin-bottom: 0;
+    border-bottom: none;
+    color: #003c71;
+}
+
+.btn {
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+
+.btn-box-tool {
+    padding: 5px;
+    font-size: 12px;
+    background: transparent;
+    color: #97a0b3;
+}
+
+.removeTourRecentItem {
+    padding: 0px;
+    background: transparent;
+    margin: 0%;
+}
+
+.card-price>p {
+    font-size: 16px;
+    color: #00c1de;
+    margin-right: 1rem;
+}
+
+.card-item .card-content {
+    display: flex;
+}
+
+.card-removal {
+    float: right;
+}
+
+.row-top {
+    height: 70%;
+}
+
+.row-bottom {
+    height: 30%;
+    float: right;
+}
+
+.card-name {
+    color: #003c71;
+    font-weight: bold;
+}
+
+/* Search box */
+
+.search-box {
+    background-color: #003c71;
+}
+
+.tourHomeIntro {
+    color: white;
+}
+
+.search-float {
+    float: left;
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+    z-index: 999;
+    padding: 3em;
+    font-weight: bold;
+    width: 60%;
 }

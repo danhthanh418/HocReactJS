@@ -1,3 +1,10 @@
+To run this app we need :
+   
+  From project onpen commandline an type `npm install` to download all module from packed-json.js
+        
+Then  folder type `npm start` to start locall webserver to run app
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
