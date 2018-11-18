@@ -32,16 +32,20 @@ class App extends Component {
     }
   };
 
-  hanleClick = ()=>(
+  handleOpenForm = ()=>(
    this.setState({
       isDisplayForm: !this.state.isDisplayForm
     })
   )
-
+  handleCloseForm = () => (
+    this.setState({
+      isDisplayForm: !this.state.isDisplayForm
+    })
+  )
   
   render() {
     const {tasks, isDisplayForm} = this.state
-    const elemForm = isDisplayForm?<TaskForm></TaskForm>:'';
+    const elemForm = isDisplayForm?<TaskForm closeForm = {()=>this.handleCloseForm()}></TaskForm>:'';
     return (
       <div className="container-fliud mt-1e">
         <div className="card">
@@ -50,7 +54,7 @@ class App extends Component {
           <div className="row">
               {elemForm}
               <div className={isDisplayForm ? "col-xs-8 col-sm-8 col-md-8 col-lg-8" :"col-xs-12 col-sm-12 col-md-12 col-lg-12"}>
-                <Controls onReceiveTask={(tasks) => this.onCreateTask(tasks)} action={() => this.hanleClick()}></Controls>
+                <Controls onReceiveTask={(tasks) => this.onCreateTask(tasks)} action={() => this.handleOpenForm()}></Controls>
                   <TaskList tasks={tasks}></TaskList>
               </div>
               
